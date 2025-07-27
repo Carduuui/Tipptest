@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Tipp Test</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="generateWords()">
+        <nav>
+            <p class="logo">WPM-Test</p>
+            <ul>
+                <li class="expandable_li">
+                    <input type="checkbox" class="prodcuts_checkbox">
+                    <label for="products_checkbox">User</label>
+                    <ul class="dropdown">
+                        <li type="button"><p id="username"></p></li>
+                        <li type="button" onclick="logOut()"><p>Log Out</p></li>
+                    </ul>
+                </li>
+                <li class="expandable_li">
+                    <input type="checkbox" class="products_chockbox">
+                    <label for="products_checkbox">Time</label>
+                    <ul class="dropdown">
+                        <li type="button" onclick="time15()"><p>15secs</p></li>
+                        <li type="button" onclick="time30()"><p>30secs</p></li>
+                        <li type="button" onclick="time60()"><p>60secs</p></li>
+                    </ul>
+                </li>
+                <li class="expandable_li">
+                    <input type="checkbox" class="products_checkbox">
+                    <label for="products_checkbox">Mode</label>
+                    <ul class="dropdown">
+                        <li type="button" onclick="normal()"><p>normal</p></li>
+                        <li type="button" onclick="blind()"><p>blind</p></li>
+                        <li type="button" onclick="noFail()"><p>no mistake</p></li>
+                        <li type="button" onclick="car()"><p>Car</p></li>
+                    </ul>
+                </li>
+                <li class="expandable_li">
+                    <input type="checkbox" class="products_checkbox">
+                    <label for="products_checkbox">Color</label>
+                    <ul class="dropdown">
+                        <li><input type="range" min="0" max="256" value="0" id="myRange1" class="slider"></li>
+                        <li><input type="range" min="0" max="256" value="0" id="myRange2" class="slider"></li>
+                        <li><input type="range" min="0" max="256" value="0" id="myRange3" class="slider"></li>
+                    </ul>
+                </li>
+                <li class="expandable_li">
+                    <input type="checkbox" class="prodcuts_checkbox">
+                    <label for="products_checkbox">Highscore</label>
+                    <ul class="dropdown">
+                        <li><p id="highscore"></p></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="over">
+            <div id="finish"></div>
+            <div>
+                <img id="car" src="Auto.png">
+            </div>
+            <div class="container">
+                <div id="text">
+                    <p id="showtext"></p>
+                </div>
+                <p id="calculate"></p>
+                <input id="eingabefeld" type="text" maxlength="80">
+            </div>
+            <div id="timer">60</div>
+            <div id="reset" type="button" onclick="ResetReplace()">
+                <a id="resetTab" href="#reset">
+                    <img id="reload_arrow" src="reload_arrow.png">
+                </a>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
